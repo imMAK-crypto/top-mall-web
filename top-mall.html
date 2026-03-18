@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOP MALL — Where Every Woman Shines | Kozhikode</title>
+<meta name="description" content="Top Mall — Kozhikode's premier women's fashion boutique. Tops, Abayas, Gowns, Shawls, Party Wear. S.M. Street, Palayam, Kozhikode – 673001, Kerala.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080507;
+  --bg2: #110d0f;
+  --bg3: #1a1318;
+  --gold: #c9a96e;
+  --gold-l: #e8d5a3;
+  --gold-d: #8b6914;
+  --rose: #b5737a;
+  --cream: #f5efe8;
+  --muted: #7d6e6b;
+  --border: rgba(201,169,110,0.15);
+  --glass: rgba(201,169,110,0.05);
+  --grad: linear-gradient(135deg,#c9a96e 0%,#e8d5a3 50%,#c9a96e 100%);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Jost',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+#root{width:100%;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold-d);border-radius:2px}
+.font-display{font-family:'Italiana',serif}
+.font-accent{font-family:'Cormorant Garamond',serif}
+.text-gold{color:var(--gold)}
+.text-grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.text-muted{color:var(--muted)}
+.text-cream{color:var(--cream)}
+section{width:100%}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem;width:100%}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.8s ease,transform 0.8s ease}
+#loader.hide{opacity:0;transform:scale(0.98);pointer-events:none}
+.loader-star{width:80px;height:80px;margin-bottom:2rem}
+.loader-star path{stroke:var(--gold);stroke-width:1.5;fill:none;stroke-dasharray:400;stroke-dashoffset:400;animation:drawStar 1.5s ease forwards}
+@keyframes drawStar{to{stroke-dashoffset:0}}
+.loader-title{display:flex;gap:2px;overflow:hidden;margin-bottom:1rem}
+.loader-title span{font-family:'Italiana',serif;font-size:2.5rem;color:var(--gold);opacity:0;transform:translateY(20px);animation:letterUp 0.5s ease forwards}
+.loader-line{width:120px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;animation:lineExpand 0.6s ease 1.6s forwards}
+@keyframes lineExpand{to{transform:scaleX(1)}}
+.loader-sub{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.3em;color:var(--muted);opacity:0;animation:fadeIn 0.5s ease 2s forwards;margin-top:0.75rem;text-transform:uppercase}
+@keyframes letterUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{to{opacity:1}}
+
+/* NAVBAR */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 0;transition:all 0.4s ease}
+nav.scrolled{background:rgba(8,5,7,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0.9rem 0}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Italiana',serif;font-size:1.4rem;color:var(--gold);display:flex;align-items:center;gap:0.5rem;text-decoration:none;letter-spacing:0.05em}
+.nav-logo::before{content:'✦';font-size:0.8rem;color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);text-decoration:none;position:relative;padding-bottom:2px;transition:color 0.2s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-icons{display:flex;gap:1rem;align-items:center}
+.nav-icons a{color:var(--gold);font-size:1.1rem;text-decoration:none;transition:transform 0.2s,color 0.2s;display:flex;align-items:center}
+.nav-icons a:hover{transform:scale(1.15);color:var(--gold-l)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--gold);transition:all 0.3s ease;transform-origin:center}
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--bg);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Italiana',serif;font-size:2.5rem;color:var(--cream);text-decoration:none;transition:color 0.2s;opacity:0;transform:translateX(30px);animation:slideIn 0.4s ease forwards}
+.mobile-menu a:hover{color:var(--gold)}
+@keyframes slideIn{to{opacity:1;transform:translateX(0)}}
+.close-menu{position:absolute;top:1.5rem;right:2rem;font-size:1.5rem;color:var(--gold);cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-canvas{position:absolute;inset:0;z-index:0}
+canvas{width:100%!important;height:100%!important}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(8,5,7,0.3) 0%,rgba(8,5,7,0.1) 40%,rgba(8,5,7,0.7) 80%,rgba(8,5,7,1) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 1rem;max-width:900px;margin:0 auto}
+.hero-label{display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s ease 0.3s forwards}
+.hero-label-line{width:40px;height:1px;background:var(--gold)}
+.hero-label span{font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold)}
+.hero-h1{overflow:hidden}
+.hero-h1 .line1{font-family:'Italiana',serif;font-size:clamp(3.5rem,9vw,7rem);color:var(--cream);display:block;opacity:0;transform:translateY(80px);animation:heroReveal 1s cubic-bezier(0.16,1,0.3,1) 0.5s forwards;line-height:1.05}
+.hero-h1 .line2{font-family:'Italiana',serif;font-size:clamp(3.5rem,9vw,7rem);display:block;opacity:0;transform:translateY(80px);animation:heroReveal 1s cubic-bezier(0.16,1,0.3,1) 0.7s forwards;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.05}
+@keyframes heroReveal{to{opacity:1;transform:translateY(0)}}
+.hero-divider{display:flex;align-items:center;justify-content:center;gap:0.75rem;margin:1.5rem 0;opacity:0;animation:fadeIn 0.6s ease 1s forwards;color:var(--gold);font-size:0.8rem}
+.hero-divider::before,.hero-divider::after{content:'';flex:1;max-width:60px;height:1px;background:var(--gold);opacity:0.5}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--muted);opacity:0;animation:fadeIn 0.6s ease 1.2s forwards;margin-bottom:3rem;letter-spacing:0.05em}
+.hero-ctas{display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s ease 1.4s forwards}
+.btn-primary{background:var(--gold);color:var(--bg);font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2.5rem;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:transform 0.2s,box-shadow 0.2s;font-weight:500}
+.btn-primary:hover{transform:scale(1.03);box-shadow:0 8px 40px rgba(201,169,110,0.35)}
+.btn-outline{background:transparent;color:var(--gold);font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2.5rem;border:1px solid var(--gold);cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s,color 0.2s}
+.btn-outline:hover{background:rgba(201,169,110,0.1)}
+.scroll-indicator{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;opacity:0;animation:fadeIn 1s ease 2s forwards;z-index:2}
+.scroll-line{width:1px;height:40px;background:var(--gold);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.3;transform:scaleY(0.5)}}
+.scroll-text{font-family:'Jost',sans-serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--muted);text-transform:uppercase}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+#marquee{background:var(--gold);overflow:hidden;padding:0.75rem 0}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 25s linear infinite}
+.marquee-track2{display:flex;white-space:nowrap;animation:marqueeR 25s linear infinite;margin-top:0.25rem}
+.marquee-track:hover,.marquee-track2:hover{animation-play-state:paused}
+.marquee-track span,.marquee-track2 span{font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--bg);padding:0 1.5rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-33.333%)}}
+@keyframes marqueeR{from{transform:translateX(-33.333%)}to{transform:translateX(0)}}
+
+/* REVEAL ANIMATION */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* SECTION HEADERS */
+.section-label{font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.section-title{font-family:'Italiana',serif;font-size:clamp(2.5rem,5vw,4rem);color:var(--cream);line-height:1.1;margin-bottom:1.25rem}
+.section-underline{width:60px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 1s ease}
+.section-underline.visible{transform:scaleX(1)}
+.text-center .section-underline{transform-origin:center;margin:0 auto}
+
+/* COLLECTIONS */
+#collections{background:var(--bg2);padding:6rem 0}
+.collections-header{text-align:center;margin-bottom:4rem}
+.collections-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:320px 320px;gap:3px;width:100%}
+.collection-card{position:relative;overflow:hidden;cursor:pointer}
+.collection-card:first-child{grid-row:1/3}
+.card-bg{position:absolute;inset:0;transition:transform 0.6s ease}
+.collection-card:hover .card-bg{transform:scale(1.04)}
+.card-content{position:absolute;bottom:0;left:0;right:0;padding:2rem;z-index:2}
+.card-num{position:absolute;top:1.25rem;right:1.25rem;font-family:'Italiana',serif;font-size:5rem;color:rgba(245,239,232,0.06);line-height:1;z-index:1;pointer-events:none}
+.card-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.8rem;color:rgba(201,169,110,0.7);letter-spacing:0.1em;display:block;margin-bottom:0.25rem}
+.card-name{font-family:'Italiana',serif;font-size:2rem;color:var(--cream);line-height:1;display:block}
+.card-name.large{font-size:2.75rem}
+.card-desc{font-family:'Jost',sans-serif;font-size:0.75rem;color:var(--muted);margin-top:0.4rem;display:block}
+.card-hover{position:absolute;inset:0;background:rgba(201,169,110,0.95);display:flex;align-items:center;justify-content:center;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);z-index:3}
+.card-hover span{font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--bg);font-weight:500}
+.collection-card:hover .card-hover{transform:translateY(0)}
+.collections-cta{text-align:center;margin-top:3rem}
+
+/* EXPERIENCE */
+#experience{background:var(--bg);padding:6rem 0}
+.experience-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.exp-label{display:block}
+.exp-title{font-family:'Italiana',serif;font-size:clamp(2.5rem,4.5vw,3.5rem);color:var(--cream);line-height:1.1;margin-bottom:2rem}
+.exp-title span{display:block;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.exp-rule{width:0;height:1px;background:var(--gold);margin-bottom:2rem;transition:width 1.2s ease}
+.exp-rule.visible{width:100%}
+.usp-list{list-style:none;display:flex;flex-direction:column;gap:0.9rem;margin-bottom:2.5rem}
+.usp-list li{display:flex;align-items:center;gap:0.75rem;font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--cream);opacity:0;transform:translateX(-20px);transition:all 0.5s ease}
+.usp-list li.visible{opacity:1;transform:translateX(0)}
+.usp-list li::before{content:'✦';color:var(--gold);font-size:0.7rem;flex-shrink:0}
+.exp-canvas{position:relative;height:500px;border:1px solid var(--border)}
+.exp-canvas canvas{width:100%!important;height:100%!important}
+
+/* PHILOSOPHY */
+#philosophy{background:var(--bg2);padding:8rem 0;position:relative;overflow:hidden}
+.phil-deco{position:absolute;top:-2rem;left:50%;transform:translateX(-50%);font-family:'Italiana',serif;font-size:12rem;color:rgba(201,169,110,0.04);line-height:1;pointer-events:none;user-select:none}
+.phil-inner{text-align:center;max-width:900px;margin:0 auto;position:relative;z-index:1}
+.phil-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2rem,4vw,3rem);color:var(--cream);line-height:1.4;margin-bottom:2rem}
+.phil-attr{display:flex;align-items:center;justify-content:center;gap:1rem;color:var(--gold)}
+.phil-attr-line{width:40px;height:1px;background:var(--gold)}
+.phil-attr span{font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.5em;text-transform:uppercase}
+.phil-stats{display:flex;gap:1.5rem;justify-content:center;margin-top:5rem;flex-wrap:wrap}
+.stat-card{background:var(--glass);border:1px solid var(--border);padding:2rem 2.5rem;text-align:center;flex:1;min-width:160px;max-width:220px;transition:transform 0.3s,border-color 0.3s}
+.stat-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.stat-num{font-family:'Italiana',serif;font-size:3rem;color:var(--gold);display:block;line-height:1}
+.stat-lbl{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.5rem;display:block}
+
+/* CATEGORIES */
+#categories{background:var(--bg);padding:6rem 0}
+.cat-header{text-align:center;margin-bottom:3rem}
+.cat-scroll{display:flex;gap:1.25rem;overflow-x:auto;padding:1rem 2rem 2rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;cursor:grab}
+.cat-scroll::-webkit-scrollbar{display:none}
+.cat-scroll:active{cursor:grabbing}
+.cat-card{min-width:280px;height:400px;scroll-snap-align:start;flex-shrink:0;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s;border:1px solid transparent}
+.cat-card:hover{transform:translateY(-8px);border-color:var(--gold);filter:brightness(1.1)}
+.cat-card-bg{position:absolute;inset:0}
+.cat-card-num{position:absolute;top:1rem;right:1.25rem;font-family:'Italiana',serif;font-size:5rem;color:rgba(245,239,232,0.05);line-height:1;pointer-events:none}
+.cat-card-bottom{position:absolute;bottom:0;left:0;right:0;padding:1.75rem}
+.cat-card-label{font-family:'Jost',sans-serif;font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(201,169,110,0.6);display:block;margin-bottom:0.4rem}
+.cat-card-name{font-family:'Italiana',serif;font-size:2rem;color:var(--cream);display:block;line-height:1.1}
+.cat-card-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.85rem;color:rgba(201,169,110,0.8);margin-top:0.3rem;display:block}
+.cat-deco-line{position:absolute;top:0;right:0;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--gold),transparent);opacity:0.15}
+
+/* INSTAGRAM */
+#instagram{background:var(--bg2);padding:6rem 0}
+.ig-header{text-align:center;margin-bottom:3rem}
+.ig-handle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--gold);text-decoration:none;display:block;margin-top:0.5rem;transition:color 0.2s}
+.ig-handle:hover{color:var(--gold-l)}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;width:100%}
+.ig-cell{aspect-ratio:1/1;position:relative;overflow:hidden;cursor:pointer}
+.ig-cell-bg{position:absolute;inset:0;transition:transform 0.5s ease}
+.ig-cell:hover .ig-cell-bg{transform:scale(1.06)}
+.ig-cell-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.4;transition:opacity 0.3s}
+.ig-cell-bottom{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(8,5,7,0.85));z-index:1}
+.ig-cell-bottom span{font-family:'Jost',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.ig-cell-overlay{position:absolute;inset:0;background:rgba(201,169,110,0.12);opacity:0;transition:opacity 0.3s;z-index:2;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem}
+.ig-cell:hover .ig-cell-overlay{opacity:1}
+.ig-cell-overlay span{font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-l)}
+.ig-cta{text-align:center;margin-top:3rem}
+
+/* CONTACT */
+#contact{background:var(--bg);padding:6rem 0}
+.contact-header{text-align:center;margin-bottom:4rem}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.contact-card{padding:2.25rem;position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;border:1px solid}
+.contact-card:hover{transform:translateY(-4px)}
+.card-icon{width:2.5rem;height:2.5rem;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center}
+.card-icon svg{width:2rem;height:2rem}
+.contact-card h3{font-family:'Italiana',serif;font-size:1.5rem;color:var(--cream);margin-bottom:0.5rem}
+.contact-card .number{font-family:'Jost',sans-serif;font-size:1rem;color:var(--gold);margin-bottom:0.75rem;display:block}
+.contact-card p{font-family:'Jost',sans-serif;font-size:0.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
+.contact-card .addr{font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--cream);line-height:1.9;margin-bottom:1.5rem;display:block}
+.contact-card .addr strong{color:var(--gold-l);font-weight:500}
+.contact-card .tag{font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);margin-bottom:1.5rem;display:block}
+.card-wa{background:linear-gradient(135deg,#0a1a0e,#0d2410);border-color:rgba(37,211,102,0.2)}
+.card-wa:hover{box-shadow:0 0 30px rgba(37,211,102,0.08)}
+.card-loc{background:var(--glass);border-color:var(--gold);border-top-width:2px}
+.card-loc:hover{box-shadow:0 0 30px rgba(201,169,110,0.08)}
+.card-ig{background:linear-gradient(135deg,#1a0821,#200a2a);border-color:rgba(228,64,95,0.2)}
+.card-ig:hover{box-shadow:0 0 30px rgba(228,64,95,0.08)}
+.btn-wa{background:#25d366;color:#fff;font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 1.75rem;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:opacity 0.2s;font-weight:500}
+.btn-wa:hover{opacity:0.88}
+.btn-gold-o{background:transparent;color:var(--gold);font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 1.75rem;border:1px solid var(--gold);cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s}
+.btn-gold-o:hover{background:rgba(201,169,110,0.1)}
+.btn-ig{background:linear-gradient(135deg,#e1306c,#833ab4);color:#fff;font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 1.75rem;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:opacity 0.2s;font-weight:500}
+.btn-ig:hover{opacity:0.88}
+.ig-handle-large{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--gold);display:block;margin-bottom:0.5rem}
+
+/* FOOTER */
+footer{background:#040203;border-top:1px solid var(--border);position:relative;overflow:hidden}
+.footer-deco{position:absolute;bottom:-1rem;left:0;right:0;font-family:'Italiana',serif;font-size:clamp(5rem,15vw,12rem);color:rgba(201,169,110,0.035);text-align:center;line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
+.footer-main{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:3rem}
+.footer-brand{}
+.footer-logo{font-family:'Italiana',serif;font-size:1.25rem;color:var(--gold);margin-bottom:0.5rem;display:block}
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--muted);margin-bottom:1.25rem;display:block}
+.footer-addr{font-family:'Jost',sans-serif;font-size:0.75rem;color:var(--muted);line-height:2;display:block}
+.footer-col-title{font-family:'Jost',sans-serif;font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:block}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
+.footer-links a{font-family:'Jost',sans-serif;font-size:0.8rem;color:var(--cream);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact-item{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;font-family:'Jost',sans-serif;font-size:0.8rem;color:var(--cream)}
+.footer-contact-item a{color:var(--cream);text-decoration:none;transition:color 0.2s}
+.footer-contact-item a:hover{color:var(--gold)}
+.footer-socials{display:flex;gap:0.75rem;margin-top:1.5rem}
+.footer-socials a{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;transition:color 0.2s,border-color 0.2s}
+.footer-socials a:hover{color:var(--gold);border-color:var(--gold)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:1.25rem 2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.footer-bottom span{font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted)}
+.footer-sep{width:1px;height:16px;background:var(--border)}
+
+/* WHATSAPP FLOAT */
+#wa-float{position:fixed;bottom:2rem;right:2rem;z-index:1000;display:flex;align-items:center;gap:0.75rem;opacity:0;transform:translateY(60px);transition:opacity 0.6s ease,transform 0.6s ease}
+#wa-float.show{opacity:1;transform:translateY(0)}
+.wa-btn{width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;position:relative;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(37,211,102,0.35)}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.5)}
+.wa-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(37,211,102,0.5);animation:pulseRing 2s ease-out infinite}
+@keyframes pulseRing{0%{transform:scale(1);opacity:0.7}100%{transform:scale(1.6);opacity:0}}
+.wa-text{background:var(--bg3);border:1px solid var(--border);padding:0.5rem 1rem;font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap;max-width:0;overflow:hidden;transition:max-width 0.3s ease,padding 0.3s ease;opacity:0}
+#wa-float:hover .wa-text{max-width:120px;opacity:1}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .collections-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 300px 300px}
+  .collection-card:first-child{grid-row:1/2;grid-column:1/3}
+  .experience-inner{grid-template-columns:1fr;gap:3rem}
+  .exp-canvas{height:360px}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .collections-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .collection-card:first-child{grid-row:auto;grid-column:auto}
+  .collection-card{height:280px}
+  .ig-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-main{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:0.75rem;text-align:center}
+  .hero-ctas{flex-direction:column;align-items:center}
+  .phil-stats{flex-direction:column;align-items:center}
+  .cat-scroll{padding:1rem}
+  .cat-card{min-width:240px;height:340px}
+}
+@media(max-width:480px){
+  .container{padding:0 1.25rem}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <svg class="loader-star" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <path class="loader-star" d="M40 5 L44 30 L65 10 L50 30 L75 34 L52 40 L75 46 L50 50 L65 70 L44 50 L40 75 L36 50 L15 70 L30 50 L5 46 L28 40 L5 34 L30 30 L15 10 L36 30 Z"/>
+  </svg>
+  <div class="loader-title" id="loaderTitle"></div>
+  <div class="loader-line"></div>
+  <div class="loader-sub">Kozhikode · Kerala</div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">TOP MALL</a>
+    <ul class="nav-links">
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#categories">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20am%20interested%20in%20your%20collections." target="_blank" rel="noopener noreferrer">Order</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+      </a>
+      <a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20am%20interested%20in%20your%20collections." target="_blank" rel="noopener noreferrer" title="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      </a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" onclick="toggleMenu()">✕</button>
+  <a href="#collections" onclick="toggleMenu()" style="animation-delay:0.1s">Collections</a>
+  <a href="#categories" onclick="toggleMenu()" style="animation-delay:0.2s">About</a>
+  <a href="#contact" onclick="toggleMenu()" style="animation-delay:0.3s">Contact</a>
+  <a href="https://wa.me/918219445522" target="_blank" rel="noopener noreferrer" style="animation-delay:0.4s;color:var(--gold)">Order Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-canvas">
+    <canvas id="heroCanvas"></canvas>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">
+      <div class="hero-label-line"></div>
+      <span>Est. S.M. Street, Kozhikode</span>
+      <div class="hero-label-line"></div>
+    </div>
+    <div class="hero-h1">
+      <span class="line1">Where Every</span>
+      <span class="line2">Woman Shines</span>
+    </div>
+    <div class="hero-divider">✦</div>
+    <p class="hero-sub">Tops · Abayas · Gowns · Shawls · Party Wear</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20am%20interested%20in%20your%20collections.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-primary">Order on WhatsApp</a>
+      <a href="#collections" class="btn-outline">View Collections ↓</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div id="marquee">
+  <div class="marquee-track">
+    <span>TOP MALL ✦</span><span>ABAYAS ✦</span><span>GOWNS ✦</span><span>PARTY WEAR ✦</span><span>SHAWLS ✦</span><span>TOPS ✦</span><span>S.M. STREET ✦</span><span>KOZHIKODE ✦</span><span>NEW ARRIVALS ✦</span>
+    <span>TOP MALL ✦</span><span>ABAYAS ✦</span><span>GOWNS ✦</span><span>PARTY WEAR ✦</span><span>SHAWLS ✦</span><span>TOPS ✦</span><span>S.M. STREET ✦</span><span>KOZHIKODE ✦</span><span>NEW ARRIVALS ✦</span>
+    <span>TOP MALL ✦</span><span>ABAYAS ✦</span><span>GOWNS ✦</span><span>PARTY WEAR ✦</span><span>SHAWLS ✦</span><span>TOPS ✦</span><span>S.M. STREET ✦</span><span>KOZHIKODE ✦</span><span>NEW ARRIVALS ✦</span>
+  </div>
+  <div class="marquee-track2">
+    <span>WOMEN'S FASHION ✦</span><span>KERALA STYLE ✦</span><span>ETHNIC WEAR ✦</span><span>BUDGET LUXURY ✦</span><span>PALAYAM ✦</span><span>LATEST TRENDS ✦</span><span>FAST ORDERS ✦</span><span>TOP MALL ✦</span>
+    <span>WOMEN'S FASHION ✦</span><span>KERALA STYLE ✦</span><span>ETHNIC WEAR ✦</span><span>BUDGET LUXURY ✦</span><span>PALAYAM ✦</span><span>LATEST TRENDS ✦</span><span>FAST ORDERS ✦</span><span>TOP MALL ✦</span>
+    <span>WOMEN'S FASHION ✦</span><span>KERALA STYLE ✦</span><span>ETHNIC WEAR ✦</span><span>BUDGET LUXURY ✦</span><span>PALAYAM ✦</span><span>LATEST TRENDS ✦</span><span>FAST ORDERS ✦</span><span>TOP MALL ✦</span>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+<section id="collections">
+  <div class="container">
+    <div class="collections-header reveal">
+      <span class="section-label">Our Collections</span>
+      <h2 class="section-title">Dressed for Every Occasion</h2>
+      <div class="section-underline"></div>
+    </div>
+    <div class="collections-grid">
+      <!-- Card 1: Abayas (tall) -->
+      <div class="collection-card reveal" onclick="window.open('https://www.instagram.com/top_mall_/','_blank')" style="animation-delay:0s">
+        <div class="card-bg" style="background:linear-gradient(160deg,#1a0e1a 0%,#2d1529 50%,#1a0e1a 100%);position:absolute;inset:0">
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.04" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"><pattern id="arabesque" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 0 L40 20 L20 40 L0 20 Z M20 10 L30 20 L20 30 L10 20 Z" fill="none" stroke="#c9a96e" stroke-width="0.5"/><circle cx="20" cy="20" r="4" fill="none" stroke="#c9a96e" stroke-width="0.5"/></pattern><rect width="200" height="200" fill="url(#arabesque)"/></svg>
+        </div>
+        <span class="card-num">01</span>
+        <div class="card-content">
+          <span class="card-label">Collection</span>
+          <span class="card-name large">Abayas</span>
+          <span class="card-desc">Elegant abayas for every occasion</span>
+        </div>
+        <div class="card-hover"><span>Explore on Instagram →</span></div>
+      </div>
+      <!-- Card 2: Party Wear -->
+      <div class="collection-card reveal" onclick="window.open('https://www.instagram.com/top_mall_/','_blank')" style="transition-delay:0.1s">
+        <div class="card-bg" style="background:linear-gradient(135deg,#0d1a1a 0%,#0a2420 100%);position:absolute;inset:0"></div>
+        <span class="card-num">02</span>
+        <div class="card-content">
+          <span class="card-label">Collection</span>
+          <span class="card-name">Party Wear</span>
+          <span class="card-desc">Dazzle every celebration</span>
+        </div>
+        <div class="card-hover"><span>Explore on Instagram →</span></div>
+      </div>
+      <!-- Card 3: Gowns -->
+      <div class="collection-card reveal" onclick="window.open('https://www.instagram.com/top_mall_/','_blank')" style="transition-delay:0.2s">
+        <div class="card-bg" style="background:linear-gradient(135deg,#1a1200 0%,#2a1f00 100%);position:absolute;inset:0"></div>
+        <span class="card-num">03</span>
+        <div class="card-content">
+          <span class="card-label">Collection</span>
+          <span class="card-name">Gowns</span>
+          <span class="card-desc">Grace in every thread</span>
+        </div>
+        <div class="card-hover"><span>Explore on Instagram →</span></div>
+      </div>
+      <!-- Card 4: Tops -->
+      <div class="collection-card reveal" onclick="window.open('https://www.instagram.com/top_mall_/','_blank')" style="transition-delay:0.3s">
+        <div class="card-bg" style="background:linear-gradient(135deg,#1a0a0d 0%,#2a0f15 100%);position:absolute;inset:0"></div>
+        <span class="card-num">04</span>
+        <div class="card-content">
+          <span class="card-label">Collection</span>
+          <span class="card-name">Tops</span>
+          <span class="card-desc">Everyday elegance</span>
+        </div>
+        <div class="card-hover"><span>Explore on Instagram →</span></div>
+      </div>
+      <!-- Card 5: Shawls -->
+      <div class="collection-card reveal" onclick="window.open('https://www.instagram.com/top_mall_/','_blank')" style="transition-delay:0.4s">
+        <div class="card-bg" style="background:linear-gradient(135deg,#0a0d1a 0%,#0f1529 100%);position:absolute;inset:0"></div>
+        <span class="card-num">05</span>
+        <div class="card-content">
+          <span class="card-label">Collection</span>
+          <span class="card-name">Shawls</span>
+          <span class="card-desc">Wrap in pure luxury</span>
+        </div>
+        <div class="card-hover"><span>Explore on Instagram →</span></div>
+      </div>
+    </div>
+    <div class="collections-cta reveal" style="transition-delay:0.3s">
+      <a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20want%20to%20shop%20your%20collections." target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size:0.75rem;padding:1.1rem 3rem">Shop All Collections on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE / 3D -->
+<section id="experience">
+  <div class="container">
+    <div class="experience-inner">
+      <div>
+        <span class="section-label reveal-left exp-label">Crafted for</span>
+        <h2 class="exp-title reveal-left" style="transition-delay:0.1s">Every <span>Woman</span></h2>
+        <div class="exp-rule reveal-left" style="transition-delay:0.2s"></div>
+        <ul class="usp-list" id="uspList">
+          <li style="transition-delay:0.1s">Budget Friendly Prices</li>
+          <li style="transition-delay:0.2s">Latest Kerala &amp; National Trends</li>
+          <li style="transition-delay:0.3s">Instant WhatsApp Orders</li>
+          <li style="transition-delay:0.4s">Walk-in Welcome, S.M. Street</li>
+        </ul>
+        <div class="reveal-left" style="transition-delay:0.5s">
+          <a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20am%20interested%20in%20your%20collections." target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-bottom:1.5rem;display:inline-block">Order on WhatsApp</a>
+        </div>
+        <div class="reveal-left" style="transition-delay:0.6s;background:var(--glass);border:1px solid var(--border);padding:1.25rem 1.5rem;margin-top:0.5rem">
+          <span style="font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.4rem">Visit Us</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream)">Address Mall, S.M. Street, Palayam<br>Kozhikode – 673001, Kerala</span>
+        </div>
+      </div>
+      <div class="exp-canvas reveal-right">
+        <canvas id="expCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="phil-deco">"</div>
+  <div class="container">
+    <div class="phil-inner">
+      <blockquote class="phil-quote reveal">
+        "Fashion is not about price —<br>it is about feeling beautiful."
+      </blockquote>
+      <div class="phil-attr reveal" style="transition-delay:0.2s">
+        <div class="phil-attr-line"></div>
+        <span>TOP MALL</span>
+        <div class="phil-attr-line"></div>
+      </div>
+      <div class="phil-stats">
+        <div class="stat-card reveal" style="transition-delay:0.1s">
+          <span class="stat-num">500+</span>
+          <span class="stat-lbl">Happy Customers</span>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.2s">
+          <span class="stat-num">5+</span>
+          <span class="stat-lbl">Years of Fashion</span>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.3s">
+          <span class="stat-num">100+</span>
+          <span class="stat-lbl">Styles Weekly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="container">
+    <div class="cat-header reveal">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Our Categories</h2>
+    </div>
+  </div>
+  <div class="cat-scroll" id="catScroll">
+    <div class="cat-card" style="background:linear-gradient(135deg,#1a0821,#2d1032)">
+      <div class="cat-deco-line"></div>
+      <span class="cat-card-num">01</span>
+      <div class="cat-card-bottom">
+        <span class="cat-card-label">Collection</span>
+        <span class="cat-card-name">Abayas</span>
+        <span class="cat-card-sub">Curated Selection</span>
+      </div>
+    </div>
+    <div class="cat-card" style="background:linear-gradient(135deg,#041a0e,#082818)">
+      <div class="cat-deco-line"></div>
+      <span class="cat-card-num">02</span>
+      <div class="cat-card-bottom">
+        <span class="cat-card-label">Collection</span>
+        <span class="cat-card-name">Gowns</span>
+        <span class="cat-card-sub">Curated Selection</span>
+      </div>
+    </div>
+    <div class="cat-card" style="background:linear-gradient(135deg,#1a0408,#2d0810)">
+      <div class="cat-deco-line"></div>
+      <span class="cat-card-num">03</span>
+      <div class="cat-card-bottom">
+        <span class="cat-card-label">Collection</span>
+        <span class="cat-card-name">Tops</span>
+        <span class="cat-card-sub">Curated Selection</span>
+      </div>
+    </div>
+    <div class="cat-card" style="background:linear-gradient(135deg,#040818,#081228)">
+      <div class="cat-deco-line"></div>
+      <span class="cat-card-num">04</span>
+      <div class="cat-card-bottom">
+        <span class="cat-card-label">Collection</span>
+        <span class="cat-card-name">Shawls</span>
+        <span class="cat-card-sub">Curated Selection</span>
+      </div>
+    </div>
+    <div class="cat-card" style="background:linear-gradient(135deg,#1a1004,#2d1c08)">
+      <div class="cat-deco-line"></div>
+      <span class="cat-card-num">05</span>
+      <div class="cat-card-bottom">
+        <span class="cat-card-label">Collection</span>
+        <span class="cat-card-name">Party Wear</span>
+        <span class="cat-card-sub">Curated Selection</span>
+      </div>
+    </div>
+    <div class="cat-card" style="background:linear-gradient(135deg,#041418,#082228)">
+      <div class="cat-deco-line"></div>
+      <span class="cat-card-num">06</span>
+      <div class="cat-card-bottom">
+        <span class="cat-card-label">Collection</span>
+        <span class="cat-card-name">Ethnic Wear</span>
+        <span class="cat-card-sub">Curated Selection</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="container">
+    <div class="ig-header reveal">
+      <span class="section-label">Social</span>
+      <h2 class="section-title">Follow Our Journey</h2>
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-handle">@top_mall_</a>
+    </div>
+    <div class="ig-grid">
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-cell reveal" style="transition-delay:0s">
+        <div class="ig-cell-bg" style="background:linear-gradient(135deg,#1a0821,#4a1832)"></div>
+        <div class="ig-cell-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg></div>
+        <div class="ig-cell-bottom"><span>View on Instagram</span></div>
+        <div class="ig-cell-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#e8d5a3"/></svg><span>Open Post</span></div>
+      </a>
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-cell reveal" style="transition-delay:0.1s">
+        <div class="ig-cell-bg" style="background:linear-gradient(135deg,#0a1a14,#1a4030)"></div>
+        <div class="ig-cell-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M8 12L11 15L16 9"/></svg></div>
+        <div class="ig-cell-bottom"><span>View on Instagram</span></div>
+        <div class="ig-cell-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#e8d5a3"/></svg><span>Open Post</span></div>
+      </a>
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-cell reveal" style="transition-delay:0.2s">
+        <div class="ig-cell-bg" style="background:linear-gradient(135deg,#1a1200,#3d2d00)"></div>
+        <div class="ig-cell-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="ig-cell-bottom"><span>View on Instagram</span></div>
+        <div class="ig-cell-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#e8d5a3"/></svg><span>Open Post</span></div>
+      </a>
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-cell reveal" style="transition-delay:0.1s">
+        <div class="ig-cell-bg" style="background:linear-gradient(135deg,#0a0818,#1a1038)"></div>
+        <div class="ig-cell-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="ig-cell-bottom"><span>View on Instagram</span></div>
+        <div class="ig-cell-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#e8d5a3"/></svg><span>Open Post</span></div>
+      </a>
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-cell reveal" style="transition-delay:0.2s">
+        <div class="ig-cell-bg" style="background:linear-gradient(135deg,#1a0408,#3d0e18)"></div>
+        <div class="ig-cell-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1"><path d="M20 7H4C2.9 7 2 7.9 2 9V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V9C22 7.9 21.1 7 20 7Z"/><path d="M16 3H8L6 7H18L16 3Z"/><circle cx="12" cy="14" r="3"/></svg></div>
+        <div class="ig-cell-bottom"><span>View on Instagram</span></div>
+        <div class="ig-cell-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#e8d5a3"/></svg><span>Open Post</span></div>
+      </a>
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="ig-cell reveal" style="transition-delay:0.3s">
+        <div class="ig-cell-bg" style="background:linear-gradient(135deg,#081418,#102830)"></div>
+        <div class="ig-cell-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+        <div class="ig-cell-bottom"><span>View on Instagram</span></div>
+        <div class="ig-cell-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#e8d5a3"/></svg><span>Open Post</span></div>
+      </a>
+    </div>
+    <div class="ig-cta reveal" style="transition-delay:0.2s;margin-top:3rem">
+      <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.6rem;font-size:0.75rem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        Follow @top_mall_ on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-header reveal">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Find Us &amp; Order</h2>
+    </div>
+    <div class="contact-grid">
+      <!-- WhatsApp -->
+      <div class="contact-card card-wa reveal" style="transition-delay:0s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </div>
+        <h3>Order on WhatsApp</h3>
+        <span class="number">+91 82194 45522</span>
+        <p>Tap to browse collections, check prices &amp; place orders instantly</p>
+        <a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20am%20interested%20in%20ordering.%20Please%20share%20available%20collections." target="_blank" rel="noopener noreferrer" class="btn-wa">Chat Now →</a>
+      </div>
+      <!-- Visit -->
+      <div class="contact-card card-loc reveal" style="transition-delay:0.15s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Visit Our Store</h3>
+        <span class="addr"><strong>Address Mall</strong><br>S.M. Street, Palayam<br>Kozhikode – 673001<br>Kerala, India</span>
+        <p style="font-size:0.75rem">Hours: Check Instagram for timings</p>
+        <a href="https://maps.google.com/?q=Address+Mall+SM+Street+Palayam+Kozhikode+Kerala" target="_blank" rel="noopener noreferrer" class="btn-gold-o" style="margin-top:1rem;display:inline-block">Get Directions →</a>
+      </div>
+      <!-- Instagram -->
+      <div class="contact-card card-ig reveal" style="transition-delay:0.3s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32"><defs><linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igGrad)"/><rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="white" stroke-width="1.5"/><circle cx="16.5" cy="7.5" r="0.8" fill="white"/></svg>
+        </div>
+        <h3>DM on Instagram</h3>
+        <span class="ig-handle-large">@top_mall_</span>
+        <p>Browse our latest collections, reels &amp; new arrivals</p>
+        <span class="tag">#TopMallSmStreet</span>
+        <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" class="btn-ig">Open Instagram →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <span class="footer-logo">✦ TOP MALL ✦</span>
+      <span class="footer-tagline">Where Every Woman Shines</span>
+      <span class="footer-addr">Address Mall, S.M. Street<br>Palayam, Kozhikode – 673001<br>Kerala, India</span>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://wa.me/918219445522" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <span class="footer-col-title">Explore</span>
+      <ul class="footer-links">
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#philosophy">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20want%20to%20order." target="_blank" rel="noopener noreferrer">Order via WhatsApp</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Connect</span>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#25d366" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <a href="https://wa.me/918219445522" target="_blank" rel="noopener noreferrer">+91 82194 45522</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="var(--gold)"/></svg>
+        <a href="https://www.instagram.com/top_mall_/" target="_blank" rel="noopener noreferrer">@top_mall_</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Top Mall · All Rights Reserved</span>
+    <div class="footer-sep"></div>
+    <span>S.M. Street · Kozhikode · Kerala</span>
+  </div>
+  <div class="footer-deco">TOP MALL</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div id="wa-float">
+  <span class="wa-text">Order Now</span>
+  <a href="https://wa.me/918219445522?text=Hi%20Top%20Mall!%20I%20am%20interested%20in%20your%20collections." target="_blank" rel="noopener noreferrer" class="wa-btn" title="Order on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+<script>
+// LOADER
+const letters = 'TOP MALL'.split('');
+const loaderTitle = document.getElementById('loaderTitle');
+letters.forEach((l, i) => {
+  const span = document.createElement('span');
+  span.textContent = l === ' ' ? '\u00A0' : l;
+  span.style.animationDelay = (0.8 + i * 0.08) + 's';
+  loaderTitle.appendChild(span);
+});
+setTimeout(() => {
+  document.getElementById('loader').classList.add('hide');
+  document.body.style.overflow = '';
+  setTimeout(() => document.getElementById('loader').remove(), 900);
+}, 2800);
+document.body.style.overflow = 'hidden';
+
+// NAVBAR SCROLL
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// MOBILE MENU
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  const links = m.querySelectorAll('a');
+  links.forEach((l, i) => {
+    l.style.animationDelay = (0.1 + i * 0.1) + 's';
+    l.style.opacity = '0';
+    l.style.transform = 'translateX(30px)';
+    if (m.classList.contains('open')) {
+      setTimeout(() => { l.style.animation = 'slideIn 0.4s ease forwards'; }, 50);
+    }
+  });
+}
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      if (e.target.classList.contains('section-underline')) {
+        e.target.classList.add('visible');
+      }
+      // USP list items
+      if (e.target.id === 'uspList') {
+        e.target.querySelectorAll('li').forEach((li, i) => {
+          setTimeout(() => li.classList.add('visible'), i * 120);
+        });
+      }
+      // exp-rule
+      const rules = e.target.querySelectorAll ? e.target.querySelectorAll('.exp-rule') : [];
+      rules.forEach(r => r.classList.add('visible'));
+    }
+  });
+}, { threshold: 0.15, rootMargin: '-80px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .section-underline, #uspList').forEach(el => observer.observe(el));
+// Also observe the experience section to trigger exp-rule
+document.querySelectorAll('.exp-rule').forEach(el => observer.observe(el));
+
+// WA FLOAT
+setTimeout(() => document.getElementById('wa-float').classList.add('show'), 3000);
+
+// DRAG SCROLL FOR CATEGORIES
+const catScroll = document.getElementById('catScroll');
+let isDown = false, startX, scrollLeft;
+catScroll.addEventListener('mousedown', e => {
+  isDown = true; catScroll.style.cursor = 'grabbing';
+  startX = e.pageX - catScroll.offsetLeft;
+  scrollLeft = catScroll.scrollLeft;
+});
+catScroll.addEventListener('mouseleave', () => { isDown = false; catScroll.style.cursor = 'grab'; });
+catScroll.addEventListener('mouseup', () => { isDown = false; catScroll.style.cursor = 'grab'; });
+catScroll.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  catScroll.scrollLeft = scrollLeft - (e.pageX - catScroll.offsetLeft - startX);
+});
+
+// HERO CANVAS — Three.js particles + TorusKnots
+(function initHeroCanvas() {
+  const canvas = document.getElementById('heroCanvas');
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const vsSource = `
+    attribute vec3 aPos;
+    attribute float aSize;
+    attribute float aAlpha;
+    uniform mat4 uProj;
+    uniform mat4 uView;
+    uniform float uTime;
+    varying float vAlpha;
+    void main() {
+      vec3 p = aPos;
+      p.y += mod(uTime * 0.15 + aPos.y + 10.0, 20.0) - 10.0 - aPos.y;
+      float yFrac = mod(uTime * 0.15 + aPos.y + 10.0, 20.0) / 20.0;
+      vAlpha = aAlpha * sin(yFrac * 3.14159);
+      gl_Position = uProj * uView * vec4(p, 1.0);
+      gl_PointSize = aSize * (300.0 / gl_Position.w);
+    }
+  `;
+  const fsSource = `
+    precision mediump float;
+    varying float vAlpha;
+    void main() {
+      vec2 c = gl_PointCoord - 0.5;
+      float d = dot(c,c);
+      if (d > 0.25) discard;
+      gl_FragColor = vec4(0.788, 0.663, 0.431, vAlpha * (1.0 - d * 4.0));
+    }
+  `;
+
+  function compileShader(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, compileShader(gl.VERTEX_SHADER, vsSource));
+  gl.attachShader(prog, compileShader(gl.FRAGMENT_SHADER, fsSource));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+
+  const N = 2000;
+  const positions = new Float32Array(N * 3);
+  const sizes = new Float32Array(N);
+  const alphas = new Float32Array(N);
+  for (let i = 0; i < N; i++) {
+    const r = 12 * Math.cbrt(Math.random());
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    positions[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i*3+2] = r * Math.cos(phi) - 5;
+    sizes[i] = 1.5 + Math.random() * 2;
+    alphas[i] = 0.3 + Math.random() * 0.5;
+  }
+
+  function createBuf(data) {
+    const b = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, b);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+    return b;
+  }
+  const posBuf = createBuf(positions);
+  const sizeBuf = createBuf(sizes);
+  const alphaBuf = createBuf(alphas);
+
+  const uProj = gl.getUniformLocation(prog, 'uProj');
+  const uView = gl.getUniformLocation(prog, 'uView');
+  const uTime = gl.getUniformLocation(prog, 'uTime');
+  const aPos  = gl.getAttribLocation(prog, 'aPos');
+  const aSize = gl.getAttribLocation(prog, 'aSize');
+  const aAlpha = gl.getAttribLocation(prog, 'aAlpha');
+
+  function perspective(fov, aspect, near, far) {
+    const f = 1 / Math.tan(fov / 2);
+    const nf = 1 / (near - far);
+    return new Float32Array([f/aspect,0,0,0, 0,f,0,0, 0,0,(far+near)*nf,-1, 0,0,2*far*near*nf,0]);
+  }
+  function lookAt(eye, center, up) {
+    const f = normalize(sub(center, eye));
+    const s = normalize(cross(f, up));
+    const u = cross(s, f);
+    return new Float32Array([s[0],u[0],-f[0],0, s[1],u[1],-f[1],0, s[2],u[2],-f[2],0,
+      -dot(s,eye),-dot(u,eye),dot(f,eye),1]);
+  }
+  function normalize(v) { const l = Math.sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]); return [v[0]/l,v[1]/l,v[2]/l]; }
+  function sub(a,b) { return [a[0]-b[0],a[1]-b[1],a[2]-b[2]]; }
+  function cross(a,b) { return [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]; }
+  function dot(a,b) { return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; }
+
+  let startTime = Date.now();
+  function render() {
+    const t = (Date.now() - startTime) / 1000;
+    gl.clearColor(0,0,0,0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+
+    const aspect = canvas.width / canvas.height;
+    gl.uniformMatrix4fv(uProj, false, perspective(Math.PI/3, aspect, 0.1, 100));
+    gl.uniformMatrix4fv(uView, false, lookAt([0,0,18],[0,0,0],[0,1,0]));
+    gl.uniform1f(uTime, t);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, posBuf);
+    gl.enableVertexAttribArray(aPos);
+    gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuf);
+    gl.enableVertexAttribArray(aSize);
+    gl.vertexAttribPointer(aSize, 1, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, alphaBuf);
+    gl.enableVertexAttribArray(aAlpha);
+    gl.vertexAttribPointer(aAlpha, 1, gl.FLOAT, false, 0, 0);
+
+    gl.drawArrays(gl.POINTS, 0, N);
+    requestAnimationFrame(render);
+  }
+  render();
+})();
+
+// EXPERIENCE CANVAS — Rotating icosahedron wireframe
+(function initExpCanvas() {
+  const canvas = document.getElementById('expCanvas');
+  const gl = canvas.getContext('webgl');
+  if (!gl) return;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    gl.viewport(0,0,canvas.width,canvas.height);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Build icosahedron vertices
+  const t = (1 + Math.sqrt(5)) / 2;
+  const rawVerts = [
+    [-1,t,0],[1,t,0],[-1,-t,0],[1,-t,0],
+    [0,-1,t],[0,1,t],[0,-1,-t],[0,1,-t],
+    [t,0,-1],[t,0,1],[-t,0,-1],[-t,0,1]
+  ];
+  const norm = Math.sqrt(1 + t*t);
+  const verts = rawVerts.map(v => v.map(x => x/norm)).flat();
+
+  const indices = [
+    0,11,5, 0,5,1, 0,1,7, 0,7,10, 0,10,11,
+    1,5,9, 5,11,4, 11,10,2, 10,7,6, 7,1,8,
+    3,9,4, 3,4,2, 3,2,6, 3,6,8, 3,8,9,
+    4,9,5, 2,4,11, 6,2,10, 8,6,7, 9,8,1
+  ];
+
+  // Build wireframe edges
+  const edgeSet = new Set();
+  const edgeVerts = [];
+  for (let i = 0; i < indices.length; i += 3) {
+    const tri = [indices[i], indices[i+1], indices[i+2]];
+    for (let j = 0; j < 3; j++) {
+      const a = tri[j], b = tri[(j+1)%3];
+      const key = Math.min(a,b) + '_' + Math.max(a,b);
+      if (!edgeSet.has(key)) {
+        edgeSet.add(key);
+        edgeVerts.push(...verts.slice(a*3,a*3+3), ...verts.slice(b*3,b*3+3));
+      }
+    }
+  }
+
+  const vs = `
+    attribute vec3 aPos;
+    uniform mat4 uMVP;
+    void main() { gl_Position = uMVP * vec4(aPos * 2.5, 1.0); }
+  `;
+  const fs = `
+    precision mediump float;
+    void main() { gl_FragColor = vec4(0.788, 0.663, 0.431, 0.7); }
+  `;
+  function makeShader(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src); gl.compileShader(s); return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, makeShader(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, makeShader(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(edgeVerts), gl.STATIC_DRAW);
+
+  const aPos = gl.getAttribLocation(prog, 'aPos');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 0, 0);
+
+  const uMVP = gl.getUniformLocation(prog, 'uMVP');
+
+  function mat4mul(a, b) {
+    const r = new Float32Array(16);
+    for (let i=0;i<4;i++) for (let j=0;j<4;j++) for (let k=0;k<4;k++) r[j*4+i]+=a[k*4+i]*b[j*4+k];
+    return r;
+  }
+  function rotY(a) { return new Float32Array([Math.cos(a),0,-Math.sin(a),0, 0,1,0,0, Math.sin(a),0,Math.cos(a),0, 0,0,0,1]); }
+  function rotX(a) { return new Float32Array([1,0,0,0, 0,Math.cos(a),Math.sin(a),0, 0,-Math.sin(a),Math.cos(a),0, 0,0,0,1]); }
+  function proj(aspect) {
+    const f = 1/Math.tan(Math.PI/4);
+    return new Float32Array([f/aspect,0,0,0, 0,f,0,0, 0,0,-1.002,-1, 0,0,-0.2002,0]);
+  }
+  function trans(z) { return new Float32Array([1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,z,1]); }
+
+  let t0 = Date.now();
+  function draw() {
+    const elapsed = (Date.now()-t0)/1000;
+    gl.clearColor(0,0,0,0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    const aspect = canvas.width/canvas.height;
+    const mvp = mat4mul(mat4mul(proj(aspect), trans(-6)), mat4mul(rotY(elapsed*0.003*60), rotX(elapsed*0.001*60)));
+    gl.uniformMatrix4fv(uMVP, false, mvp);
+    gl.drawArrays(gl.LINES, 0, edgeVerts.length/3);
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
